@@ -1,0 +1,132 @@
+<!--Inicio de la aplicacion (News Feed).
+-Seccion que se podrá previsualizar las actividades de la semana actual.
+        Autores: 
+Montserrat Devars Peralta.
+David Eduardo Parra Mercado.
+Daniela Requejo Fernandez.
+
+Ultima modificacion: 14 de Marzo de 2017.
+
+Fuentes de apoyo: http://codepen.io -->
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+ <!--Metas-->
+    <meta charset="UTF-8">
+    <meta name="author" content="Montserrat Devars, Daniela Requejo, David E. Parra">
+    <meta name="copyright" content="Montserrat Devars, Daniela Requejo, David E. Parra">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title>Coordinaci&oacute;n Preuniversitaria</title>
+    
+    <!--Favicon-->
+    <link rel="shortcut icon" href="img/Favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/Favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    
+    <!--Links a los archivos CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    
+    <!--Links a los archivos JS-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>    
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    
+
+
+</head>
+<script>
+
+    /*Funcion para hacer el efecto del input*/
+    $(function() {
+
+        $(".input input").focus(function() {
+
+            $(this).parent(".input").each(function() {
+                $("label", this).css({
+                    "line-height": "18px",
+                    "font-size": "18px",
+                    "font-weight": "100",
+                    "top": "0px"
+                })
+                $(".spin", this).css({
+                    "width": "100%"
+                })
+            });
+        }).blur(function() {
+            $(".spin").css({
+                "width": "0px"
+            })
+            if ($(this).val() == "") {
+                $(this).parent(".input").each(function() {
+                    $("label", this).css({
+                        "line-height": "60px",
+                        "font-size": "24px",
+                        "font-weight": "300",
+                        "top": "10px"
+                    })
+                });
+
+            }
+        });
+    });
+    
+</script>
+<body>
+    <!--Visualizacion de las opciones del mennu (se maneja con AJAX)-->    
+ <div id="area">
+ </div>  
+<!--Menu de navegacion-->    
+ <nav class="main-menu">
+    <ul class="main">
+        <li>
+            <!--Inicio-->
+            <a href="#">
+                <i class='fa fa-home fa-2x'></i>
+                <span class="nav-text">Inicio</span>
+            </a>
+        </li>
+        <!--Actividades-->
+        <li>
+            <a href="#">
+                <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">Actividades</span>
+            </a>
+        </li>
+        <!--Semanales-->
+        <li >
+            <a href="#">
+                <i class="fa fa-folder-open fa-2x"></i>
+                <span class="nav-text">Semanales</span>
+            </a>
+                   
+        </li>
+         <!--Colegios-->
+         <li>
+            <a href="#">
+                <i class="fa fa-book fa-2x"></i>
+                <span class="nav-text">Colegios</span>
+            </a>  
+        </li>
+         <!--Empleados-->
+        <li>
+            <a href="#">
+                <i class="fa fa-group fa-2x"></i>
+                <span class="nav-text">Empleados</span>
+            </a>  
+        </li>
+    </ul>
+    <!--Salir-->
+    <ul class="logout">
+        <li>
+            <a href="index.html">
+            <i class="fa fa-power-off fa-2x"></i>
+            <span class="nav-text">Salir</span>
+            </a>
+        </li>  
+    </ul>
+</nav>
+</body>
+</html>

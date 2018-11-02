@@ -1,0 +1,162 @@
+#caja{
+  position: relative;
+  left: 400px;
+  width: 1000px;
+  height: 400px;  
+}
+#caja1{
+  position: relative;
+  left: 240px;
+  width: 1000px;
+  height: 400px;  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrap-schedule .header-schedule {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  padding: 1em 2em;
+  border-bottom: 2px solid #dadee1;
+}
+.wrap-schedule .body-schedule {
+  width: 100%;
+  height: calc(100vh - 121px);
+
+}
+.wrap-schedule .body-schedule .wrapper .prev-week,
+.wrap-schedule .body-schedule .wrapper .current-week,
+.wrap-schedule .body-schedule .wrapper .next-week {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% / 3);
+          flex: 0 0 calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrap-schedule .body-schedule .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 300%;
+  
+}
+.wrap-schedule .body-schedule .wrapper .prev-week,
+.wrap-schedule .body-schedule .wrapper .current-week,
+.wrap-schedule .body-schedule .wrapper .next-week {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% / 3);
+          flex: 0 0 calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% / 7);
+          flex: 0 0 calc(100% / 7);
+  border-right: 2px solid #dadee1;
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day .header-day {
+  background-color: #f8f9fb;
+  border-bottom: 2px solid #dadee1;
+  text-align: center;
+  padding: 1em 0;
+  color: #333;
+  font-size: 13px;
+  font-weight: bold;
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day .body-day {
+  height: calc(100vh - 164px);
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day .body-day .wrap-hour {
+  height: 44px;
+  padding: 0.75em;
+  text-align: right;
+  border-bottom: 2px solid #f2f2f2;
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day .body-day .wrap-hour:last-child {
+  border-bottom: none;
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day .body-day .wrap-hour.event {
+  padding: 0;
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day .body-day .wrap-hour.event .inner-event {
+  height: 100%;
+  text-align: left;
+  padding: 0.35em 0.75em 0.35em 1em;
+  border-left: 5px solid red;
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day .body-day .wrap-hour.event .inner-event .title-event {
+  display: block;
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day .body-day .wrap-hour.event .inner-event .time-event {
+  display: block;
+  color: #BFBFBF;
+  font-size: 10px;
+}
+.wrap-schedule .body-schedule .wrapper .wrap-day .body-day .wrap-hour .time {
+  color: #BFBFBF;
+  font-size: 12px;
+}
+
+/** initial setup */
+.wrap-day {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.wrap-day > .body-day {
+  position: absolute;
+  overflow: scroll;
+  overflow-x: hidden;
+  top: 43px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.wrap-day:focus {
+  outline: thin dotted;
+}
+.wrap-day::-webkit-scrollbar {
+  display: none;
+}
+
+.has-scrollbar > .body-day::-webkit-scrollbar {
+  display: block;
+}
+
+.nano > .nano-pane {
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  width: 8px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden\9;
+  opacity: 0.01;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+.nano .nano-slider {
+  background: #444;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin: 0 1px;
+  border-radius: 3px;
+}
+
+.wrap-day:hover > .nano-pane,
+.nano-pane.active,
+.nano-pane.flashed {
+  visibility: visible\9;
+  opacity: 0.99;
+}

@@ -1,2 +1,2 @@
-# Activity_WebAplication
-Html, Css, JavaScript and Php
+# Activities-App
+Having a full control on your calendar activities

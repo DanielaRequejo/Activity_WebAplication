@@ -1,0 +1,106 @@
+/***************************
+* Calendario para fecha    *
+****************************/
+/*Div que contiene el calendario*/
+
+.ui-datepicker {
+   width: auto;
+   background-color: white;
+}
+.ui-widget-content {
+   border: 1px solid #aaaaaa;
+   background-color: #FFFFFF;
+}
+.ui-datepicker:hover {
+   background-color: #FFFFFF;
+}
+.ui-widget-content:hover {
+   border: 1px solid #aaaaaa;
+   background: #FFFFFF;
+}
+/*Tabla con los días del mes*/
+
+.ui-datepicker table {
+   font-size: 9px;
+}
+/*Cabecera*/
+
+    /*Botones de siguiente y previo*/
+.ui-icon,
+.ui-widget-content .ui-icon {
+   background-image: url(http://strd6.com/stuff/jqui/theme/images/ui-icons_ffffff_256x240.png);
+}
+.ui-datepicker .ui-datepicker-header {
+   font-size: 11px;
+   background: rgb(192, 57, 43);
+   color: #FFFFFF;
+   text-transform: uppercase;
+}
+.ui-widget-header {
+   border: none;
+   background: white;
+   color: #222222;
+   font-weight: bold;
+}
+    
+.ui-datepicker .ui-datepicker-title select {
+    font-size: 0.89em;
+    margin: 1px 0;
+    background-color: rgb(192, 57, 43);
+    border-color: rgb(192, 57, 43);
+    color: white;
+    text-transform: uppercase;
+}
+/*Para los días de la semana.*/
+
+.ui-datepicker th {
+   color: rgb(192, 57, 43);
+}
+/*Para items con los días del mes por defecto */
+
+.ui-datepicker .ui-state-default {
+   background: rgba(230, 230, 230, .3);
+   color: #787878;
+   text-align: center;
+   border: #FFFFFF;
+}
+/*Para el item del día del mes seleccionado */
+
+.ui-datepicker .ui-state-active {
+   background: rgb(192, 57, 43);
+   color: #FFFFFF;
+}
+.ui-datepicker:hover {
+   background-color: white;
+}
+.overbox .title,
+.overbox .button,
+.overbox .input {
+   z-index: 111;
+   position: relative;
+   color: #fff !important;
+   display: none;
+}
+.overbox .title {
+   width: 80%;
+}
+    
+.ui-datepicker th {
+     color: rgb(192, 57, 43);
+    background-color: white;
+}
+    
+.ui-datepicker tr:hover {
+    background-color: white;
+}
+    
+    .ui-datepicker tr {
+    background-color: white;
+}
+
+button, select {
+    text-transform: none;
+    border: none;
+    background: none;
+}
+
